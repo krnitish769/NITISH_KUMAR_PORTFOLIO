@@ -105,12 +105,65 @@
     .header-mono2 {
         margin: 2px 0px;
     } */
+    /* Navigation Bar */
+#navBar {
+    background-color: white; /* fully opaque */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.90); /* visible shadow */
+    position: relative; /* keep initial position normal */
+    z-index: 1000;
+    transition: all 0.5s ease;
+    padding: 0 1.5rem;
+    align-items: center;
+}
 
-    .profilePicBoxResponsive {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
+.navMain {
+    height: 12vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    li{
+        font-size: 1.2rem;
+        font-width: 2rem;
+        font-weight: bolder;
+        a {
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-family: "Montserrat", sans-serif;
+            font-weight: 450;
+        }
+    }    
+}
+    #profilePicBox {
+        height: 6rem;
+        width: 6rem;
+        /* position: fixed; */
+        /* top: 1rem;
+        right: 1rem; */
+        /* display: none; */
     }
+    .profilePic {
+    height: 5rem;
+    width: 5rem;
+    border: 6px solid white;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.5s ease, width 0.5s ease;
+}
+/* Profile pic moves right + shrinks when sticky */
+#navBar.sticky #profilePicBox {
+    /* display: none; */
+    padding-top: 4px;
+    padding-left: 0px;
+    padding-right: 5px;
+
+    margin-left: 0px;
+    margin-right: 50px;
+    justify-content: flex-end;
+    transform: translateX(50px); /* Slide right (adjust px as needed) */
+}
 
     #downloadResumeBox {
         margin:5px 19px;
@@ -124,6 +177,7 @@
     /* #profilePic {
         border-radius: 5px;
     } */
+     
 
     /* Footer Style */
 
