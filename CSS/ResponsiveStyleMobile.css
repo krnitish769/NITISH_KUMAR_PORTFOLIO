@@ -40,7 +40,7 @@
         border-radius: 12px;
         text-align: center;
         width: 80%;
-        max-width: 350px;
+        max-width: 800px;
 
         box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
@@ -52,7 +52,7 @@
 
     .maintenance-box p {
         color: #333;
-        line-height: 1.5;
+        line-height: 2;
     }
 /* ===============================================================*/
 
