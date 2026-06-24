@@ -17,7 +17,8 @@
 
 /* =============================================================== */
 /* UNDER MAINTAINANCE - MOBILE VIEW */
-    #mobile-maintenance {
+/* =============================================================== */
+    #view-maintenance-massage {
         display: flex;
         position: fixed;
         top: 0;
