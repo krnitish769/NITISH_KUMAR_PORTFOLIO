@@ -11,7 +11,12 @@ import {
   useTransform,
 } from "motion/react";
 import { useEffect } from "react";
-import { Code2 } from "lucide-react";
+import {
+  Code2,
+  FileText,
+  Download,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function Portrait3D() {
   const reduceMotion = useReducedMotion();
@@ -236,36 +241,66 @@ export default function Portrait3D() {
           </p>
         </motion.div>
 
-        {/* Bottom identity panel */}
-        <motion.div
-          style={
-            reduceMotion
-              ? {}
-              : {
-                  x: cardX,
-                  y: cardScroll,
-                  translateZ: 200,
-                }
-          }
-          className="absolute bottom-[2%] left-[4%] z-40 flex w-[92%] flex-col items-start gap-3 rounded-2xl border border-accent/30 bg-[#151815]/95 px-4 py-4 shadow-2xl backdrop-blur-xl sm:bottom-[3%] sm:left-[5%] sm:w-[90%] sm:flex-row sm:items-center sm:justify-between sm:gap-4 sm:px-5 sm:py-5"
-        >
-          <div>
-            <p className="font-display text-lg text-white sm:text-xl">
-              Nitish Kumar
-              <span className="text-accent"> — 2025</span>
-            </p>
+        
 
-            <span className="mt-2 block h-px w-8 bg-accent" />
-          </div>
 
-          <div className="flex items-center gap-3">
-            <span className="text-xs text-muted">
-              Java Full Stack Developer
-            </span>
+{/* Bottom identity panel with resume actions */}
+<motion.div
+  style={
+    reduceMotion
+      ? {}
+      : {
+          x: cardX,
+          y: cardScroll,
+          translateZ: 200,
+        }
+  }
+  className="absolute bottom-[2%] left-[4%] z-40 flex w-[92%] flex-col items-start gap-3 rounded-2xl border border-accent/30 bg-[#151815]/95 px-4 py-3 shadow-2xl backdrop-blur-xl sm:bottom-[3%] sm:left-[5%] sm:w-[90%] sm:flex-row sm:items-center sm:justify-between sm:gap-3 sm:px-5 sm:py-3"
+>
+  {/* Identity */}
+  <div className="shrink-0">
+    <p className="font-display text-xxl leading-tight text-[#FFFFFF] sm:text-[22px]">
+      Nitish{" "}
+      <span className="text-[#E8C47E]">Kumar</span>
+      <span> — 2025</span>
+    </p>
 
-            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-accent shadow-[0_0_12px_rgba(199,166,106,0.8)]" />
-          </div>
-        </motion.div>
+    <span className="mt-1.5 block h-px w-8 bg-accent" />
+
+    <p className="mt-1.5 text-xs text-muted">
+      Java Full Stack Developer
+    </p>
+  </div>
+
+  {/* Resume actions */}
+  <div className="flex flex-wrap items-center gap-2.5 sm:ml-auto sm:gap-3">
+
+    {/* Status indicator */}
+    <span className="h-2 w-2 shrink-0 rounded-full bg-accent shadow-[0_0_12px_rgba(199,166,106,0.8)] sm:ml-6" />
+
+    {/* View Resume */}
+    <a
+      href="/documents/Nitish-Kumar-Resume.pdf"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group inline-flex items-center gap-1 text-[11px] font-medium text-foreground transition-colors hover:text-accent sm:text-xs"
+    >
+      <FileText size={12} className="text-accent" />
+      View Resume
+      <ArrowUpRight size={10} />
+    </a>
+
+    {/* Download Resume */}
+    <a
+      href="/documents/Nitish-Kumar-Resume.pdf"
+      download="Nitish-Kumar-Resume.pdf"
+      className="group inline-flex items-center gap-1 rounded-full border border-accent/35 px-2.5 py-1.5 text-[11px] font-medium text-muted transition-all duration-300 hover:border-accent hover:bg-accent/10 hover:text-accent sm:text-xs"
+    >
+      <Download size={11} />
+      Download Resume
+    </a>
+  </div>
+</motion.div>
 
       </motion.div>
     </div>

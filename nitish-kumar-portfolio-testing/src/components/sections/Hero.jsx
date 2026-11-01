@@ -79,7 +79,7 @@ export default function Hero() {
           {/* Introduction and actions */}
           <div className="relative z-20 lg:col-start-1 lg:row-start-2">
 
-            <p className="max-w-xl text-base leading-8 text-muted sm:text-lg">
+            <p className="mt-4 max-w-xl text-base leading-8 text-muted sm:mt-5 sm:text-lg">
               Hi, I&apos;m Nitish Kumar. I build backend-driven applications
               using Java and Spring Boot, and create modern web experiences
               with React.

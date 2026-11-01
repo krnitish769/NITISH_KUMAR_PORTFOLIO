@@ -175,7 +175,7 @@ export default function Experience() {
 
                 <div className="mt-7 border-t border-border pt-5">
                   <span className="text-xs text-muted">
-                    {item.score}
+                    {item.affiliation}
                   </span>
                 </div>
               </motion.article>
